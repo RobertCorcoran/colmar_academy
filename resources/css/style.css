@@ -18,15 +18,24 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: gray;
+  color: #0A3D32;
+  line-height: 1.4;
+  font-family: "Titillium Web";
+  font-weight: 700;
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: gray;
+  color: color: hsl(238, 78%, 34%);
+  line-height: 1.4;
+}
+
+p {
+  color: hsl(0, 0%, 48%);
+  line-height: 1.4;
 }
 
 /* Header rules */
@@ -35,9 +44,20 @@ header {
   background-color: white;
   position: fixed;
   z-index: 2;
-
+  opacity: .85;
   width: 100%;
   border-bottom: 1px solid gray;
+  box-shadow: 3px 0 6px gray;
+}
+
+header a {
+  color: black;
+  font-weight: 500;
+  transition: box-shadow .1s linear .1s;
+}
+
+header a:hover {
+  box-shadow: 0 0 4px gray;
 }
 
 .mobile nav ul {
@@ -58,7 +78,7 @@ header {
 .banner img {
   width: 100%;
   height: auto;
-
+  background-color: white;
 }
 
 .banner-img {
@@ -67,20 +87,19 @@ header {
 }
 
 .cta {
-  background-color: lightgray;
+  background-color: #66CCB5;
 }
 
 .cta h1 {
-  font-size: 2rem;
   font-weight: bold;
-  color: darkgray;
+  color: #0A3D32;
   margin: 2rem 1rem;
 }
 
 .cta h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: darkgray;
+  color: #256E5E;
   margin: 0 1rem;
 }
 
@@ -98,10 +117,23 @@ header {
   margin: 1.5rem 1rem 2rem 1rem;
   width: 100%;
   text-decoration: none;
-  background-color: gray;
+  background-color: #3B3176;
   color: white;
   text-align: center;
   padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  border: 3px solid white;
+  transition: border .1s linear .1s;
+  transition: top .1s linear;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn:hover {
+  box-shadow: 3px 3px 6px gray;
 }
 
 /* Rules for articles section */
@@ -128,6 +160,7 @@ header {
   font-size: 1.2rem;
   color: black;
   margin: 1rem 0;
+  color: color: hsl(238, 78%, 34%);
 }
 
 .article p {
@@ -145,19 +178,24 @@ header {
   margin-bottom: 1rem;
 }
 
+.article-content h3 {
+  color: color: hsl(238, 78%, 34%);
+}
+
 /* "Start Learning" section */
 
 .learning {
   padding-bottom: 2rem;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
+  background-color: #66CCB5;
 }
 
 .learning h1 {
   text-align: center;
   padding-top: 2rem;
   margin-bottom: 1rem;
-
+  color: #0A3D32;
 }
 
 .course {
@@ -166,8 +204,16 @@ header {
 
 .course h3 {
   padding: 1rem 0 1rem 1rem;
-  background-color: lightgray;
+  background-color: white;
   margin: .25rem 1rem;
+  color: color: hsl(238, 78%, 34%);
+  box-shadow: 0 0 3px gray;
+}
+
+.course h3:active {
+  box-shadow: 0 0 12px black;
+  color: black;
+  background-color: lightgray;
 }
 
 /* Thesis section */
@@ -179,6 +225,7 @@ header {
 .thesis h1 {
   text-align: center;
   padding: 1rem 0;
+  color: #0A3D32;
 }
 
 .thesis video {
@@ -189,15 +236,24 @@ header {
 
 /* Footer */
 
+footer {
+  background-color: #191242;
+  padding: 1rem 0 1rem 1rem;
+}
+
 footer span {
   font-size: .75rem;
-  color: gray;
-  padding: 1rem 0 1rem 1rem;
+  color: white;
+
 }
 
 @media only screen and (max-width: 899px) {
   .desktop {
     display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }
 
@@ -223,6 +279,7 @@ footer span {
     flex-direction: row;
     align-items: center;
     flex-grow: 1;
+    margin-left: 1.5rem;
   }
 
   .logo span {
@@ -263,7 +320,7 @@ footer span {
   .banner {
     display: flex;
     flex-direction: row;
-    background-color: lightgray;
+    background-color: #66CCB5;
     padding: .5rem 0;
   }
 
@@ -282,6 +339,7 @@ footer span {
 
   .articles {
     display: flex;
+    box-shadow: 3px 3px 10px gray;
   }
 
   .lrg-article {
@@ -289,7 +347,7 @@ footer span {
     display: flex;
     flex-direction: column;
     width: 60%;
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #FFDFAA;
   }
 
   .lrg-article img {
@@ -299,6 +357,7 @@ footer span {
 
   .lrg-article h1 {
     padding: 2rem 0 1.5rem 0;
+    color: #0A3D32;
   }
 
   #citation {
@@ -312,6 +371,11 @@ footer span {
 
   .article {
     display: flex;
+    transition: box-shadow .1s linear .15s;
+  }
+
+  .article:hover {
+    box-shadow: 0 5px 6px gray;
   }
 
   .article img {
@@ -327,23 +391,23 @@ footer span {
   }
 
   .article-column .article:first-child {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #FFDFAA;
   }
 
   .article:after {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #FFDFAA;
     position: absolute;
     bottom: 2px;
   }
 
   .article-column .article:last-child {
-    background-color: lightgray;
+    background-color: #FFDFAA;
   }
 
   /* "Start Learning" section rules for tablet landscape and larger */
 
   .learning-lrg {
-    background-color: lightgray;
+    background-color: #66CCB5;
     margin: 0;
     padding-bottom: 2rem;
   }
@@ -351,12 +415,13 @@ footer span {
   .learning-lrg h1 {
     text-align: center;
     padding: 2rem 0 1rem 0;
+    color: #0A3D32;
   }
 
   .learning-row {
     display: flex;
     flex-direction: row;
-    background-color: lightgray;
+    background-color: #66CCB5;
   }
 
   .course-card {
@@ -365,13 +430,19 @@ footer span {
     margin: 1rem;
     display: inline-block;
     width: calc(100%/3);
+    box-shadow: 0 0 6px gray;
+    transition: box-shadow .15s linear .15s;
+  }
+
+  .course-card:hover {
+    box-shadow: 0 2px 14px hsl(0, 0%, 33%);
   }
 
   .course-card h3 {
     background-color: white;
-    color: black;
     padding: 0 0 .5rem 0;
     margin: 0;
+    color: color: hsl(238, 78%, 34%);
   }
 
   .course-card img {
@@ -407,6 +478,7 @@ footer span {
   .these-main,.article-content h3 {
     color: black;
     margin-bottom: .5rem;
+    color: color: hsl(238, 78%, 34%);
   }
 
   .thesis-main .article-content {
@@ -429,7 +501,7 @@ footer span {
   }
 
   .thesis-article:first-child {
-    background-color: lightgray;
+    background-color: #FFDFAA;
   }
 
   /* Thesis section rules for tablet landscape and larger */
