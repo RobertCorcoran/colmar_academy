@@ -11,6 +11,7 @@
     <!-- Header -->
     <header>
       <div class="page-width">
+        <!-- header and navbar for small screens -->
         <div class="mobile">
           <nav>
             <ul>
@@ -21,6 +22,7 @@
             </ul>
           </nav>
         </div>
+        <!-- header and navbar for large screens -->
         <div class="desktop">
           <div class="logo">
             <img src="./resources/images/ic-logo.svg" alt="lion emblem logo.">
@@ -34,8 +36,6 @@
               <li><a href="#">Sign in</a></li>
             </ul>
           </nav>
-
-
         </div>
       </div>
     </header>
@@ -47,6 +47,7 @@
             <div class="banner-img">
               <img src="./resources/images/banner.jpg" alt="overhead of people  studying.">
             </div>
+            <!-- Call to Action section -->
             <div class="cta">
               <div class="cta-content">
                 <h1>Learn Something New Everyday</h1>
@@ -59,6 +60,7 @@
         </div>
         <!-- Articles section -->
         <div class="articles">
+          <!-- large article only for large screens -->
           <div class="desktop lrg-article">
             <img src="./resources/images/information-main.jpg" alt="Man reading in a park">
             <div class="article-content">
@@ -69,6 +71,7 @@
               <p id="citation">Emanuel, Sr Strategist at Hiring.com</p>
             </div>
           </div>
+          <!-- article cards for phone screens and also to the right of "keep practicing" article -->
           <div class="article-column">
             <div class="article">
               <img class="mobile" src="./resources/images/information-orientation-mobile.jpg" alt="">
@@ -97,11 +100,10 @@
                 <a href="#">Read more</a>
               </div>
             </div>
-
           </div>
         </div>
         <!-- Start Learning section -->
-        <div class="learning mobile">
+        <div class="learning mobile"> <!-- phone version of the Start Learning section -->
           <h1>Start Learning</h1>
           <a href="#" class="course"><h3>Software Engineering</h3></a>
           <a href="#" class="course"><h3>Computer Art</h3></a>
@@ -110,6 +112,7 @@
           <a href="#" class="course"><h3>Business</h3></a>
           <a href="#" class="course"><h3>Marketing</h3></a>
         </div>
+        <!-- Desktop version of Start Learning section -->
         <div class="learning-lrg desktop">
           <h1>Start Learning</h1>
           <div class="learning-row">
@@ -169,28 +172,29 @@
         <div class="thesis">
           <h1>Thesis Exhibits</h1>
           <div class="thesis-content">
+            <!-- large content for thesis section, including video -->
             <div class="thesis-main">
               <video src="./resources/videos/thesis.mp4" controls poster="posterimage.jpg">
                 Not supported by your browser.
               </video>
-              <div class="article-content">
+              <div class="article-content desktop">
                 <h3>Reimagine Urban</h3>
                 <p>"Curabitur vitae libero in opsum pertitor consequat. Aliquam et commodo lectus,
                   nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam
                   eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
               </div>
             </div>
-
-            <div class="thesis-side">
-              <div class="article">
+            <!-- content to the right side of thesis video -->
+            <div class="thesis-side desktop">
+              <div class="article thesis-article">
                 <img class="#" src="./resources/images/thesis-fisma.jpg" alt="Overhead of desktop">
                 <div class="article-content">
                   <h3>Fisma: Design and Prototype</h3>
                   <p>Designer showcase of new prototype product</p>
                 </div>
             </div>
-            <div class="article">
-              <img class="#" src="./resources/images/thesis-fisma.jpg" alt="Overhead of desktop">
+            <div class="article thesis-article">
+              <img class="#" src="./resources/images/thesis-now-and-then.jpg" alt="Overhead of desktop">
               <div class="article-content">
                 <h3>Now and Then</h3>
                 <p>Research study about New York</p>
@@ -201,9 +205,12 @@
       </div>
       <!-- Footer -->
       <footer>
-        <p>&copy 2016 Colmar Academy. All rights reserved.</p>
+        <span>&copy 2016 Colmar Academy. All rights reserved.</span>
+        <div class="terms desktop">
+          <span><a href="#">Terms</a></span>
+          <span><a href="#">Privacy</a></span>
+        </div>
       </footer>
     </div>
-
   </body>
 </html>
