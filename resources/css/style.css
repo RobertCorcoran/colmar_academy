@@ -207,7 +207,6 @@ header a:hover {
   background-color: white;
   margin: .25rem 1rem;
   color: color: hsl(238, 78%, 34%);
-  box-shadow: 0 0 3px gray;
 }
 
 .course h3:active {
